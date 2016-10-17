@@ -1,0 +1,81 @@
+@import "./app/node_modules/susy/sass/susy";
+@import "./app/node_modules/modularscale-sass/stylesheets/modular-scale";
+
+@import "core/susy";
+
+@import"core/modular-scale";
+@import "core/colors";
+@import "core/reset";
+@import"core/fonts";
+
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  background-color: setcolor(white, light65);
+  color: setcolor(black, base);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  font-family: $quicksand-regular;
+}
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: ms(4);
+  background: setcolor(green, light75);
+  border-top: 1px solid setcolor(green, light45);
+  border-bottom: 1px solid setcolor(green, light45);
+  z-index: 1000;
+  & > img {
+    height: 60px;
+    width: 60px;
+  }
+  & > h1 {
+    flex: 1;
+  }
+}
+nav {
+  position: fixed;
+  // flex: 1 0 16.5%;
+  width: span(3 of 24);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 6rem;
+  // padding-left: span(0.5 of 24);
+  background: setcolor(green, light75);
+  border-right: 1px solid setcolor(green, light45);
+  z-index: 500;
+  & > a {
+    width: 100%;
+  }
+}
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1 0 83.5%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  will-change: overflow;
+  padding-top: 6rem;
+  padding-right: span(1 of 24);
+  margin-left: span(4 of 24);
+  & > section {
+    flex: 1 0 100%;
+    height: auto;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

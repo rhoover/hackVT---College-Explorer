@@ -1,0 +1,68 @@
+.research {
+  &-title {
+    @extend %title;
+  }
+  &-form {
+    width: 100%;
+  }
+  &-fieldset {
+    @extend %fieldset;
+  }
+  &-description {
+    color: setcolor(black, light35);
+    border-bottom: 1px solid setcolor(blue, light75);
+    margin-bottom: 1rem;
+    &:not(:first-of-type) {
+      margin-top: 1rem;
+    }
+  }
+  &-text-input {
+    @extend %text-input;
+    &:first-of-type {
+      margin-right: span(2 of 24);
+    }
+    &-large {
+      @extend %text-input;
+      width: span(10 of 24);
+    }
+  }
+  &-radio {
+    cursor: pointer;
+    margin-right: span(1 of 24);
+  }
+  &-button {
+    @extend %button-basics;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  &-select {
+    @extend %selects;
+  }
+  &-congrats {
+    width: 100%;
+    margin-bottom: 3rem;
+    padding: 0.5rem 0px;
+    text-align: center;
+    background: setcolor(red, light85);
+    border-radius: 0.25em;
+    border: 1px solid setcolor(red, light25);
+  }
+  &-results {
+    min-height: 10rem;
+    padding: 1rem span(1 of 24);
+    border-radius: 0.25em;
+    border: 1px solid setcolor(green, light25);
+    margin-bottom: 3rem;
+    &-item {
+      padding: 1rem span(1 of 24);
+      border-radius: 0.25em;
+      border: 1px solid setcolor(green, light55);
+      margin-bottom: 1rem;
+      & > p {
+        @include font-stack(-1);
+        margin-bottom: 0.5rem;
+      }
+    }
+
+  }
+}

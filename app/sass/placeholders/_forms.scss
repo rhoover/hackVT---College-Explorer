@@ -1,0 +1,47 @@
+%fieldset {
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid setcolor(blue, light65);
+  padding: 1rem span(1);
+}
+
+%text-input {
+  width: span(7);
+  border: 1px solid setcolor(blue, light75);
+  border-radius: .25rem;
+  padding-left: .25rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  background-color: setcolor(white, light65);
+  font-family: $quicksand-regular !important;
+  color: setcolor(black, base);
+  &:hover {
+    border: 1px solid setcolor(blue, light25);
+  }
+  &:focus {
+    outline: none;
+    border: 1px solid setcolor(blue, light25);
+    background-color: setcolor(white, light45);
+  }
+  transition: 0.5s $cubic-primary all;
+}
+
+%selects {
+  overflow: visible;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  background-color: setcolor(blue, light95);
+  &:hover {
+    border: 1px solid setcolor(blue, light25);
+  }
+  transition: 0.5s $cubic-primary border;
+}
+
+%title {
+  @include font-stack(3);
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: setcolor(green, light95);
+  border-top: 1px solid setcolor(blue, light25);
+  border-bottom: 1px solid setcolor(blue, light25);
+}

@@ -1,0 +1,10 @@
+// Susy Core
+$susy: (
+  global-box-sizing: border-box,
+  columns: 24,
+  gutters: .33,
+  gutter-position: split
+);
+
+// Susy Vars
+@include border-box-sizing;

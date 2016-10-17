@@ -1,0 +1,25 @@
+%button-basics {
+    position: relative;
+    font-family: $quicksand-regular;
+    padding: .5rem span(1);
+    text-align: center;
+    text-decoration: none;
+    background: transparent;
+    border-radius: .25em;
+    border: 1px solid setcolor(blue, light75);
+    box-shadow: 2px 2px 4px 0px setcolor(blue, light95);
+    cursor: pointer;
+    transition: 0.5s $cubic-primary all;
+    &:hover {
+      border: 1px solid setcolor(blue, light45);
+      background: setcolor(blue, light95);
+      color: setcolor(black, dark35);
+      text-shadow: 0 0 1px setcolor(blue, light35);
+    }
+    &:focus {
+        outline: none;
+    }
+    &:active {
+        outline: none;
+    }
+}

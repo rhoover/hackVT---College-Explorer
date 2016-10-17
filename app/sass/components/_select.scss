@@ -1,0 +1,12 @@
+//Courtesy: https://github.com/filamentgroup/select-css
+select {
+  cursor: pointer;
+  font-family: $quicksand-regular;
+  color: setcolor(black, light25);
+  width: 100%;
+  outline: none;
+  padding: .5rem 1rem .5rem .5rem;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}

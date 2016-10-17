@@ -1,0 +1,44 @@
+<section>
+  <h2 class="research-title">Explore Colleges:</h2>
+  <form name="rs.researchForm" id="rs.researchForm" data-ng-submit="rs.submitResearchParams(rs.formData)" class="research-form">
+  <fieldset class="research-fieldset">
+    <p class="research-description">State</p>
+    <select name="stateSelect" data-ng-options="state as state.abbr for state in rs.stateList" data-ng-model="rs.formData.state" class="research-select">
+      <option value="">-- Choose A State --</option>
+    </select>
+  </fieldset>
+  <fieldset class="research-fieldset">
+    <p class="research-description">Degree</p>
+    <label data-ng-repeat="degree in rs.degreeList" class="research-radio">
+      <input type="radio" name="degree" data-ng-value="{{degree}}" data-ng-model="rs.formData.degree" />
+      <span>{{degree.name}}</span>
+    </label>
+  </fieldset>
+  <fieldset class="research-fieldset">
+    <p class="research-description">Minimal Acceptable Admission Rate</p>
+    <label data-ng-repeat="lowRate in rs.rateList" class="research-radio">
+      <input type="radio" name="lowRate" data-ng-value="{{lowRate}}" data-ng-model="rs.formData.lowRate" />
+      <span>{{lowRate}}</span>
+    </label>
+  </fieldset>
+  <fieldset class="research-fieldset">
+    <p class="research-description">Maximum Acceptable Tuition</p>
+    <label data-ng-repeat="highPrice in rs.priceList" class="research-radio">
+      <input type="radio" name="highPrice" data-ng-value="{{highPrice}}" data-ng-model="rs.formData.highPrice" />
+      <span>{{highPrice}}</span>
+    </label>
+  </fieldset>
+  </form>
+  <p data-ng-if="rs.congrats" class="research-congrats">Congrats, Successful Search!</p>
+  <button type="submit" form="rs.researchForm" class="research-button">Submit Research Criteria</button>
+  <section data-ng-if="rs.dataSuccess" class="research-results">
+    <div data-ng-repeat="item in rs.resultsList" class="research-results-item">
+      <p>College: {{item.school.name}}</p>
+      <p>Address: {{item.school.city}}, {{item.school.state}}</p>
+      <p>Admission Rate: {{item.info.admissions.admission_rate.overall}}%</p>
+      <p>Typical SAT Scores: Reading - {{item.info.admissions.sat_scores.midpoint.critical_reading}}, Math - {{item.info.admissions.sat_scores.midpoint.math}}, Writing - {{item.info.admissions.sat_scores.midpoint.math}}</p>
+      <p>Tuition: In-State - ${{item.info.cost.tuition.in_state}}, Out-of-State - ${{item.info.cost.tuition.out_of_state}}</p>
+      <p>Post Graduation Debt: Monthly Payments of ${{item.info.aid.median_debt.completers.monthly_payments}}, For A Total Debt of: ${{item.info.aid.median_debt.completers.overall}}</p>
+    </div>
+  </section>
+</section>

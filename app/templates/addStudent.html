@@ -1,0 +1,36 @@
+<section>
+  <h2 class="new-student-title">Create New Student:</h2>
+  <form name="ns.addNewStudentForm" id="ns.addNewStudentForm" data-ng-submit="ns.submitNewStudent(ns.formData)" class="new-student-form">
+    <fieldset class="new-student-fieldset">
+      <p class="new-student-description">Basic</p>
+      <label>First Name:
+        <input type="text" data-ng-model="ns.formData.firstName" class="new-student-text-input" />
+      </label>
+      <label>Last Name:
+        <input type="text" data-ng-model="ns.formData.lastName" class="new-student-text-input" />
+      </label>
+    </fieldset>
+    <fieldset class="new-student-fieldset">
+      <p class="new-student-description">Grade</p>
+      <label data-ng-repeat="grade in ns.gradeList" class="new-student-radio">
+        <input type="radio" name="grade" data-ng-value="{{grade}}" data-ng-model="ns.formData.grade" />
+        <span>{{grade}}</span>
+      </label>
+    </fieldset>
+    <fieldset class="new-student-fieldset">
+      <p class="new-student-description">Graduating Year</p>
+      <label data-ng-repeat="year in ns.graduateList" class="new-student-radio">
+        <input type="radio" name="year" data-ng-value="{{year}}" data-ng-model="ns.formData.year" />
+        <span>{{year}}</span>
+      </label>
+    </fieldset>
+    <fieldset class="new-student-fieldset">
+      <p class="new-student-description">School</p>
+      <label>School Name:
+        <input type="text" data-ng-model="ns.formData.schoolName" class="new-student-text-input-large" />
+      </label>
+    </fieldset>
+  </form>
+  <p data-ng-if="ns.congrats" class="new-student-congrats">Congrats, Student Added!</p>
+  <button type="submit" form="ns.addNewStudentForm" class="new-student-button">Add New Student</button>
+</section>

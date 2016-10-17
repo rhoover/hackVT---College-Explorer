@@ -1,0 +1,25 @@
+main.ng-enter, main.ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition-property: transform;
+  transition-duration: 1.25s;
+  transition-timing-function: $cubic-primary;
+}
+
+main.ng-enter {
+  transition-delay: 1.25s;
+  transform: translate3d(-125%, 0, 0);
+}
+
+main.ng-enter-active {
+  transform: translate3d(0, 0, 0);
+}
+
+main.ng-leave {
+  transform: translate3d(0, 0, 0);
+}
+
+main.ng-leave-active {
+  transform: translate3d(0, -125%, 0);
+}

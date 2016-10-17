@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html data-ng-app="hackvt">
+  <head>
+    <meta charset="utf-8">
+    <title>College Explorer</title>
+    <!-- critical CSS -->
+    <style id="critical">*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}img,embed,object,audio,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0;text-align:left}@font-face{font-family:"quicksand-light";src:url("../app/fonts/quicksand_light/quicksand-light.eot");src:url("../app/fonts/quicksand_light/quicksand-light.eot?#iefix") format("embedded-opentype"),url("../app/fonts/quicksand_light/quicksand-light.woff") format("woff"),url("../app/fonts/quicksand_light/quicksand-light.woff2") format("woff2"),url("../app/fonts/quicksand_light/quicksand-light.ttf") format("truetype"),url("../app/fonts/quicksand_light/quicksand-light.svg#quicksand-light") format("svg")}@font-face{font-family:"quicksand-regular";src:url("../app/fonts/quicksand_regular/quicksand-regular.eot");src:url("../app/fonts/quicksand_regular/quicksand-regular.eot?#iefix") format("embedded-opentype"),url("../app/fonts/quicksand_regular/quicksand-regular.woff") format("woff"),url("../app/fonts/quicksand_regular/quicksand-regular.woff2") format("woff2"),url("../app/fonts/quicksand_regular/quicksand-regular.ttf") format("truetype"),url("../app/fonts/quicksand_regular/quicksand-regular.svg#quicksand-light") format("svg")}@font-face{font-family:"ionicons";src:url("../app/fonts/ionic/ionicons.eot");src:url("../app/fonts/ionic/ionicons.eot?#iefix") format("embedded-opentype"),url("../app/fonts/ionic/ionicons.woff") format("woff"),url("../app/fonts/ionic/ionicons.ttf") format("truetype"),url("../app/fonts/ionic/ionicons.svg#quicksand-light") format("svg")}body{display:flex;flex-wrap:wrap;width:100%;height:100%;background-color:#fcfcfc;color:#2c2c2c;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:"quicksand-regular"}header{position:fixed;width:100%;display:flex;flex-direction:row;align-items:center;padding:0.5rem 1rem;font-size:2.0736em;background:#b2eba6;border-top:1px solid #55d33c;border-bottom:1px solid #55d33c;z-index:1000}header>img{height:60px;width:60px}header>h1{flex:1}nav{position:fixed;width:11.46617%;height:100vh;display:flex;flex-direction:column;align-items:flex-start;padding-top:6rem;background:#b2eba6;border-right:1px solid #55d33c;z-index:500}nav>a{width:100%}main{display:flex;flex-direction:row;flex-wrap:wrap;flex:1 0 83.5%;height:100vh;overflow:hidden;position:relative;will-change:overflow;padding-top:6rem;padding-right:3.13283%;margin-left:15.63283%}main>section{flex:1 0 100%;height:auto;overflow:auto}main>section::-webkit-scrollbar{display:none}</style>
+      <!-- /critical CSS -->
+    <link rel="stylesheet" href="css/main.css" media="screen">
+  </head>
+  <body>
+    <header>
+      <img src="images/hackVT-icon.png" alt="" />
+      <h1>College Explorer</h1>
+    </header>
+    <nav>
+      <a data-ui-sref="home" class="nav-item">Home</a>
+      <a data-ui-sref="addStudent" class="nav-item">Add Student</a>
+      <a data-ui-sref="research" class="nav-item">Search Colleges</a>
+      <a data-ui-sref="stats" class="nav-item">Statistics</a>
+    </nav>
+    <main data-ui-view></main>
+
+    <!-- developAngular -->
+    <script id="developAngular" src="node_modules/angular/angular.js"></script>
+    <script id="developAngular" src="node_modules/angular-animate/angular-animate.js"></script>
+    <script id="developAngular" src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- /developAngular -->
+
+    <!-- developHackVT -->
+    <script id="develophackVT" src="js/hackvt.js"></script>
+
+    <script id="develophackVT" src="js/modules/boot-module.js"></script>
+    <script id="develophackVT" src="js/modules/utilities-module.js"></script>
+    <script id="develophackVT" src="js/modules/views-module.js"></script>
+
+    <script id="develophackVT" src="js/boot/configs-config.js"></script>
+    <script id="develophackVT" src="js/boot/routing-config.js"></script>
+
+    <script id="develophackVT" src="js/utilities/scorecardKey-constant.js"></script>
+    <script id="develophackVT" src="js/utilities/scorecardURL-constant.js"></script>
+    <script id="develophackVT" src="js/utilities/scorecardFetch-factory.js"></script>
+    <script id="develophackVT" src="js/utilities/disk-storage-factory.js"></script>
+    <script id="develophackVT" src="js/utilities/slugify-factory.js"></script>
+
+    <script id="develophackVT" src="js/views/newStudent-controller.js"></script>
+    <script id="develophackVT" src="js/views/research-controller.js"></script>
+    <!-- /developHackVT -->
+
+  </body>
+</html>

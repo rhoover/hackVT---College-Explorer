@@ -1,0 +1,23 @@
+.home {
+  &-header {
+    @include font-stack(3);
+    text-align: center;
+  }
+  &-text {
+    @include font-stack(0);
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  &-logo {
+    // flex: 0 0 0%;
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+  }
+  &-link {
+    text-align: right;
+    text-decoration: none;
+    color: setcolor(green, light45);
+  }
+}

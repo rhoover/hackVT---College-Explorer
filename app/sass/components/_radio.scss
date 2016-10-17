@@ -1,0 +1,28 @@
+
+//Courtesy: https://www.sitepoint.com/replacing-radio-buttons-without-replacing-radio-buttons/
+[type="radio"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  & + span::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.25em;
+    border-radius: 1em;
+    box-shadow: 0 0 0 1px setcolor(blue, light65);
+    margin-right: 0.75em;
+    transition: 0.5s $cubic-primary background;
+  }
+  &:checked + span::before {
+    border: 0.125em solid setcolor(white, base);
+    background: setcolor(blue, light25);
+    box-shadow: 0 0 0 2px setcolor(blue, light65);
+  }
+}

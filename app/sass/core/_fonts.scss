@@ -1,0 +1,36 @@
+$quicksand-light-font-path: "../app/fonts/quicksand_light";
+@font-face {
+  font-family: "quicksand-light";
+  src: url("#{$quicksand-light-font-path}/quicksand-light.eot");
+  src: url("#{$quicksand-light-font-path}/quicksand-light.eot?#iefix") format("embedded-opentype"),
+       url("#{$quicksand-light-font-path}/quicksand-light.woff") format("woff"),
+       url("#{$quicksand-light-font-path}/quicksand-light.woff2") format("woff2"),
+       url("#{$quicksand-light-font-path}/quicksand-light.ttf") format("truetype"),
+       url("#{$quicksand-light-font-path}/quicksand-light.svg#quicksand-light") format("svg");
+}
+
+$quicksand-regular-font-path: "../app/fonts/quicksand_regular";
+@font-face {
+  font-family: "quicksand-regular";
+  src: url("#{$quicksand-regular-font-path}/quicksand-regular.eot");
+  src: url("#{$quicksand-regular-font-path}/quicksand-regular.eot?#iefix") format("embedded-opentype"),
+       url("#{$quicksand-regular-font-path}/quicksand-regular.woff") format("woff"),
+       url("#{$quicksand-regular-font-path}/quicksand-regular.woff2") format("woff2"),
+       url("#{$quicksand-regular-font-path}/quicksand-regular.ttf") format("truetype"),
+       url("#{$quicksand-regular-font-path}/quicksand-regular.svg#quicksand-light") format("svg");
+}
+$ionicons-font-path: "../app/fonts/ionic";
+@font-face {
+  font-family: "ionicons";
+  src: url("#{$ionicons-font-path}/ionicons.eot");
+  src: url("#{$ionicons-font-path}/ionicons.eot?#iefix") format("embedded-opentype"),
+       url("#{$ionicons-font-path}/ionicons.woff") format("woff"),
+       url("#{$ionicons-font-path}/ionicons.ttf") format("truetype"),
+       url("#{$ionicons-font-path}/ionicons.svg#quicksand-light") format("svg");
+}
+
+$ionicons: "ionicons";
+// $quicksand-regular: "quicksand-regular", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+$quicksand-regular: "quicksand-regular";
+// $quicksand-light: "quicksand-light", "HelveticaNeue-Light", "Roboto-Light", "Segoe UI-Light", sans-serif;
+$quicksand-light: "quicksand-light";
